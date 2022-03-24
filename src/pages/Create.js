@@ -34,7 +34,7 @@ const useStyles=makeStyles({
     const history=useHistory();
 
     const [title , setTitle]=useState('')
-    const [detail, setDetail]=useState('');
+    const [details, setDetail]=useState('');
 const [textError, setTextError]=useState(false);
 const [detailError, setDetailError]=useState(false);
 const [category, setCategory]=useState('other')
@@ -53,17 +53,17 @@ const [category, setCategory]=useState('other')
       if(title===''){
         setTextError(true)
       }
-      if (detail===''){
+      if (details===''){
         setDetailError(true);
       }
 
-      if (title && detail){
+      if (title && details){
      fetch('http://localhost:5000/notes',{
        method:'POST',
        headers:{
          "Content-type":"application/json"
        },
-       body:JSON.stringify({title,detail,category})
+       body:JSON.stringify({title,details,category})
      }).then(history.push('/'))
       }
     }
