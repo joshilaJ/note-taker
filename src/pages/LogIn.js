@@ -155,6 +155,7 @@ const LogIn = () => {
           {!login && (
             <TextField
               fullWidth
+              type='number'
               onChange={phoneHandler}
               error={phoneError}
               helperText={phoneError && "enter phone "}
