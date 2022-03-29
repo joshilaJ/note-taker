@@ -5,6 +5,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { pink, purple } from '@mui/material/colors'
 import Layout from './Components/Layout'
 import BoxPaper from './pages/BoxPaper'
+import SignIn from './pages/SignIn'
+import LogIn from './pages/LogIn'
+
 
 const theme=createTheme({
   palette:{
@@ -37,6 +40,8 @@ function App() {
         <Route path="/paper">
           <BoxPaper></BoxPaper>
         </Route>
+        <Route path="/signin"><SignIn></SignIn></Route>
+        <Route path="/login"><LogIn></LogIn></Route>
       </Switch>
       </Layout>
     </Router>
