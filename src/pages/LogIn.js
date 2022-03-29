@@ -99,7 +99,7 @@ const LogIn = () => {
   };
   return (
     <div >
-      <Container maxWidth="sm" >
+      <Container maxWidth="sm">
         <Stack spacing={2} sx={{ alignItems: "center" }}>
           <Typography>{login ? "Log in " : "Registration"}</Typography>
 
